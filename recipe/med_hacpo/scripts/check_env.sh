@@ -2,6 +2,10 @@
 # Quick environment and data inventory for medical HACPO runs.
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$SCRIPT_DIR/activate_env.sh" || true
+
 echo "========== System =========="
 date
 uname -a

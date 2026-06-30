@@ -2,15 +2,28 @@
 
 医疗场景下的 HACPO 训练与联邦协作实验脚手架。
 
-## 1. 环境检查
+## 1. 环境检查与激活
 
 ```bash
-bash recipe/med_hacpo/scripts/check_env.sh
+# 自动探测 conda/venv；也可手动指定
+ENV_PATH=/path/to/your/env bash recipe/med_hacpo/scripts/check_env.sh
+
+# 或先激活再跑
+source recipe/med_hacpo/scripts/activate_env.sh
 ```
 
-关注：
-- `nvidia-smi` 是否可用（训练需要 GPU）
-- `~/data/medical_mcq/*/train.parquet` 是否存在
+脚本会按顺序尝试：
+- `$ENV_PATH` / `$VENV_PATH` / `$CONDA_ENV_PATH`
+- `~/miniconda3/envs/verl` 等常见 conda 环境
+- `~/.venv`、`/workspace/.venv` 等 venv
+- `conda activate verl`
+
+默认关闭 wandb：`WANDB_MODE=disabled`。
+
+若你的环境路径固定，可在 `~/.bashrc` 加：
+```bash
+export ENV_PATH=/your/env
+```
 
 ## 2. 数据准备
 

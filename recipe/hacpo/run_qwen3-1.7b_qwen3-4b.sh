@@ -20,6 +20,11 @@ offload=True
 project_name="hacpo"
 experiment_name="qwen3_1.7b_4b"
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -f "$SCRIPT_DIR/../med_hacpo/scripts/activate_env.sh" ]]; then
+  # shellcheck disable=SC1091
+  source "$SCRIPT_DIR/../med_hacpo/scripts/activate_env.sh"
+fi
 
 main_model=Qwen/Qwen3-1.7B-Base
 aux_model=Qwen/Qwen3-4B-Base
@@ -69,7 +74,7 @@ python3 -m verl.trainer.main_ppo \
     algorithm.kl_ctrl.kl_coef=0.0 \
     trainer.balance_batch=True \
     trainer.critic_warmup=0 \
-    trainer.logger='["wandb"]' \
+    trainer.logger='["console"]' \
     trainer.val_before_train=True \
     trainer.project_name=${project_name} \
     trainer.experiment_name=${experiment_name} \

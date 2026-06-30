@@ -3,6 +3,10 @@
 set -x
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$SCRIPT_DIR/scripts/activate_env.sh"
+
 DATA_ROOT="${DATA_ROOT:-$HOME/data/medical_mcq/medqa}"
 TRAIN_PATH="${TRAIN_PATH:-$DATA_ROOT/train.parquet}"
 TEST_PATH="${TEST_PATH:-$DATA_ROOT/test.parquet}"

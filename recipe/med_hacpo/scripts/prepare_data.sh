@@ -2,6 +2,10 @@
 # Prepare medical MCQ parquet data for verl / HACPO.
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$SCRIPT_DIR/activate_env.sh" || true
+
 SOURCE="${SOURCE:-medqa}"
 LOCAL_DIR="${LOCAL_DIR:-$HOME/data/medical_mcq/${SOURCE}}"
 MAX_TRAIN_SAMPLES="${MAX_TRAIN_SAMPLES:-}"
