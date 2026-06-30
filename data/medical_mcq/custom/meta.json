@@ -1,0 +1,8 @@
+{
+  "source": "custom_jsonl",
+  "data_source": "custom/medical_mcq_jsonl",
+  "train_rows": 1,
+  "test_rows": 1,
+  "train_path": "/workspace/data/medical_mcq/custom/train.parquet",
+  "test_path": "/workspace/data/medical_mcq/custom/test.parquet"
+}

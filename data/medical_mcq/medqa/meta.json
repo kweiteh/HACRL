@@ -1,0 +1,8 @@
+{
+  "source": "medqa",
+  "data_source": "GBaker/MedQA-USMLE-4-options",
+  "train_rows": 200,
+  "test_rows": 50,
+  "train_path": "/workspace/data/medical_mcq/medqa/train.parquet",
+  "test_path": "/workspace/data/medical_mcq/medqa/test.parquet"
+}

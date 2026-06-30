@@ -101,6 +101,16 @@ def default_compute_score(
         from . import search_r1_like_qa_em
 
         res = search_r1_like_qa_em.compute_score(solution_str, ground_truth)
+    elif data_source in [
+        "GBaker/MedQA-USMLE-4-options",
+        "openlifescienceai/medmcqa",
+        "custom/medical_mcq_jsonl",
+        "custom/medical_mcq_parquet",
+        "medical/mcq",
+    ]:
+        from . import medical_mcq
+
+        res = medical_mcq.compute_score(solution_str, ground_truth)
 
     else:
         raise NotImplementedError(f"Reward function is not implemented for {data_source=}")

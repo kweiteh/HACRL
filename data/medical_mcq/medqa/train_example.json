@@ -1,0 +1,27 @@
+{
+  "data_source": "GBaker/MedQA-USMLE-4-options",
+  "prompt": [
+    {
+      "role": "user",
+      "content": "A 23-year-old pregnant woman at 22 weeks gestation presents with burning upon urination. She states it started 1 day ago and has been worsening despite drinking more water and taking cranberry extract. She otherwise feels well and is followed by a doctor for her pregnancy. Her temperature is 97.7°F (36.5°C), blood pressure is 122/77 mmHg, pulse is 80/min, respirations are 19/min, and oxygen saturation is 98% on room air. Physical exam is notable for an absence of costovertebral angle tenderness and a gravid uterus. Which of the following is the best treatment for this patient?\n\nOptions:\nA. Ampicillin\nB. Ceftriaxone\nC. Doxycycline\nD. Nitrofurantoin\n\nYou are a medical expert. Read the clinical question carefully, reason step by step, and output the final option letter within \\boxed{}."
+    }
+  ],
+  "ability": "medical",
+  "reward_model": {
+    "style": "rule",
+    "ground_truth": "D"
+  },
+  "extra_info": {
+    "split": "train",
+    "index": 0,
+    "question": "A 23-year-old pregnant woman at 22 weeks gestation presents with burning upon urination. She states it started 1 day ago and has been worsening despite drinking more water and taking cranberry extract. She otherwise feels well and is followed by a doctor for her pregnancy. Her temperature is 97.7°F (36.5°C), blood pressure is 122/77 mmHg, pulse is 80/min, respirations are 19/min, and oxygen saturation is 98% on room air. Physical exam is notable for an absence of costovertebral angle tenderness and a gravid uterus. Which of the following is the best treatment for this patient?",
+    "options": {
+      "A": "Ampicillin",
+      "B": "Ceftriaxone",
+      "C": "Doxycycline",
+      "D": "Nitrofurantoin"
+    },
+    "answer": "D",
+    "meta_info": "step2&3"
+  }
+}
