@@ -1,0 +1,28 @@
+# Cluster SSH config template
+# Copy to Mac:  cp recipe/med_hacpo/scripts/ssh_config.cluster ~/.ssh/config.d/hacrl
+# Or append to ~/.ssh/config
+
+Host hainan
+    HostName 10.208.104.20
+    User chenqian
+    Port 10009
+
+Host guangxi
+    HostName 10.208.104.21
+    User chenqian
+    Port 10009
+
+Host sichuan
+    HostName 10.208.104.23
+    User chenqian
+    Port 10009
+
+Host dalian
+    HostName 10.208.104.32
+    User chenqian
+    Port 10009
+
+Host liaoning
+    HostName 10.208.104.10
+    User chenqian
+    Port 10009
